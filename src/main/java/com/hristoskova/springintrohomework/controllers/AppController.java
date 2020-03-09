@@ -152,6 +152,18 @@ public class AppController implements CommandLineRunner {
 
                 case "11":
                     //Ex 11
+                    System.out.println("Please, enter a book title: ");
+                    this.bookService
+                            .getBookInfoByGivenTitle(reader.readLine())
+                            .forEach(b -> System.out.println(
+                                    String.format(
+                                            "%s %s %s %.2f",
+                                            b.getTitle(),
+                                            b.getEditionType(),
+                                            b.getAgeRestriction(),
+                                            b.getPrice()
+                                    )
+                            ));
                     break;
                 default:
                     System.out.println("!!!Exercise with this number doesn't exist!!!");

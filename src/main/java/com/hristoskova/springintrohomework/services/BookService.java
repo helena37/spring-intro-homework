@@ -28,4 +28,6 @@ public interface BookService {
     List<Book> getAllBooksWithAuthorsLastNameStartsWith(String pattern);
     //Ex 9
     Integer getCountOfBooksWithTitleLengthGreaterThan(int length);
+    //Ex 11
+    List<Book> getBookInfoByGivenTitle(String title);
 }

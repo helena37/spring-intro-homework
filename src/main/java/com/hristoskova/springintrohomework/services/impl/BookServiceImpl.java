@@ -119,6 +119,12 @@ public class BookServiceImpl implements BookService {
         return this.bookRepository.countAllByTitleGreaterThan(length);
     }
 
+    //Ex 11
+    @Override
+    public List<Book> getBookInfoByGivenTitle(String title) {
+        return this.bookRepository.findBookByTitle(title);
+    }
+
     private Set<Category> setRandomCategories() {
         Set<Category> categories = new HashSet<>();
         Random random = new Random();

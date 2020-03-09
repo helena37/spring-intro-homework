@@ -36,5 +36,5 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Query("select count(b) from Book b where length(b.title) > :length")
     Integer countAllByTitleGreaterThan(int length);
     //Ex 11
-
+    List<Book> findBookByTitle(String title);
 }
